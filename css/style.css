@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background-image: url("../images/mortal-combat.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Bangers", monospace;
+}
+
+.player {
+  height: 20vw;
+  position: absolute;
+  transition: top linear 0.2s, left linear 0.2s;
+}
+
+.instructions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+
+.health {
+  width: 250px;
+}
+
+h2 {
+  width: 300px;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  line-height: 1.25;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+span {
+  color: yellow;
+  font-size: 30px;
+  padding: 0 3px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button {
+  font-family: "Bangers", monospace;
+  font-size: 50px;
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  padding: 15px 18px 15px 10px;
+  background-color: rgb(136, 231, 255);
+  align-self: flex-start;
+  border: solid #333 2px;
+  margin: 12px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#peter {
+  display: none;
+}
+
+#chicken {
+  display: none;
+}
+
+#winner {
+  /* display: none; */
+  position: absolute;
+  text-align: center;
+  display: none;
+  justify-content: center;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+#winner > img {
+  position: absolute;
+  height: 90vh;
+  top: 5vh;
+}
+#winner > h2 {
+  position: absolute;
+  font-size: 10vh;
+  top: 28vh;
+  color: rgb(0, 255, 0);
+  margin: 0 auto;
+  z-index: 1;
+}
+#restart {
+  position: absolute;
+  top: 54vh;
+}
