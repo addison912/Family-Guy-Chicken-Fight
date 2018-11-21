@@ -26,7 +26,7 @@ class player {
         if (this.position[0] < 75) {
           this.position[0] += 2;
         }
-        this.div.setAttribute("src", `./images/${this.name}-right.png`);
+        this.div.setAttribute("src", `images/${this.name}-right.png`);
         this.direction = "right";
         break;
       case this.keys[2]:
@@ -38,7 +38,7 @@ class player {
         if (this.position[0] > 0) {
           this.position[0] -= 2;
         }
-        this.div.setAttribute("src", `./images/${this.name}-left.png`);
+        this.div.setAttribute("src", `images/${this.name}-left.png`);
         this.direction = "left";
         break;
       case this.keys[4]:
@@ -54,9 +54,9 @@ class player {
     switch (key) {
       case this.keys[4]:
         if (this.direction == "left") {
-          this.div.setAttribute("src", `./images/${this.name}-left.png`);
+          this.div.setAttribute("src", `images/${this.name}-left.png`);
         } else {
-          this.div.setAttribute("src", `./images/${this.name}-right.png`);
+          this.div.setAttribute("src", `images/${this.name}-right.png`);
         }
     }
   }
@@ -68,7 +68,7 @@ class player {
       //show winner
       document
         .querySelector("#winner img")
-        .setAttribute("src", `/images/${this.name}-wins.png`);
+        .setAttribute("src", `images/${this.name}-wins.png`);
       document.querySelector("#winner h2").textContent = `${this.name} wins!`;
       //hide "click here button"
       winner.style.display = "flex";
@@ -78,7 +78,7 @@ class player {
   punch() {
     if (this.opponent.health > 0 && this.health > 0) {
       if (this.direction == "right") {
-        this.div.setAttribute("src", `./images/${this.name}-right-punch.png`);
+        this.div.setAttribute("src", `images/${this.name}-right-punch.png`);
         if (
           this.position[1] == this.opponent.position[1] &&
           this.position[0] > this.opponent.position[0] - 13 &&
@@ -88,11 +88,11 @@ class player {
           this.opponent.health--;
           this.opponent.healthImg.setAttribute(
             "src",
-            `./images/health-${this.opponent.health}.png`
+            `images/health-${this.opponent.health}.png`
           );
         }
       } else {
-        this.div.setAttribute("src", `./images/${this.name}-left-punch.png`);
+        this.div.setAttribute("src", `images/${this.name}-left-punch.png`);
         if (
           this.position[1] == this.opponent.position[1] &&
           this.position[0] > this.opponent.position[0] + 9 &&
@@ -102,7 +102,7 @@ class player {
           this.opponent.health--;
           this.opponent.healthImg.setAttribute(
             "src",
-            `./images/health-${this.opponent.health}.png`
+            `images/health-${this.opponent.health}.png`
           );
         }
       }
@@ -144,8 +144,8 @@ function start() {
   );
   peter.opponent = chicken;
   chicken.opponent = peter;
-  peter.healthImg.setAttribute("src", `./images/health-11.png`);
-  chicken.healthImg.setAttribute("src", `./images/health-11.png`);
+  peter.healthImg.setAttribute("src", `images/health-11.png`);
+  chicken.healthImg.setAttribute("src", `images/health-11.png`);
   peter.move();
   chicken.move();
 }
