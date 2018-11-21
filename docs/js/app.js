@@ -68,7 +68,7 @@ class player {
       //show winner
       document
         .querySelector("#winner img")
-        .setAttribute("src", `/images/${this.name}-wins.png`);
+        .setAttribute("src", `images/${this.name}-wins.png`);
       document.querySelector("#winner h2").textContent = `${this.name} wins!`;
       //hide "click here button"
       winner.style.display = "flex";
